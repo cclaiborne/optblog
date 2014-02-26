@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 30)
+    @posts = Post.paginate(:page => params[:page], :per_page => 10)
 
     #@posts = Post.all
     respond_to do |format|
